@@ -11,8 +11,8 @@ class solution():
 
     def warningSys(self):
         x = self.gen()
-        print(x)
-        res = [num for num in x for i in range(len(x)) if x[i] > 80]
+        print(f"All temperatures: {x}")
+        res = [int(num) for num in x if num > 80]
         return res
 
 class main():
@@ -22,7 +22,7 @@ class main():
 
     def run(self):
         x = self.solution.warningSys()
-        print(x)
+        print(f"Faulty temperatures: {x}")
 
 if __name__ == "__main__":
     application = main()
